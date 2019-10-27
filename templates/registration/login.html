@@ -1,13 +1,3 @@
-<!-- templates/registration/login.html
-
-<h2>Login</h2>
-<div style="text-align: center;">
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form>
-</div> -->
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -15,13 +5,9 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  form {
-    border: <html> <head> 3px solid #f1f1f1;
-  }
-
   input[type=text],
   input[type=password] {
-    width: 100%;
+    width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -32,11 +18,11 @@
   button {
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 12px 20px;
+    margin: 0 0 0 80px;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
   }
 
   button:hover {
@@ -54,10 +40,7 @@
     margin: 24px 0 12px 0;
   }
 
-  img.avatar {
-    width: 40%;
-    border-radius: 50%;
-  }
+
 
   .container {
     padding: 16px;
@@ -84,14 +67,21 @@
 
 <body>
 
-  <h2 style="text-align: center;">Login Form</h2>
+  <h2 style="text-align: center; background-color: rgb(26, 59, 27); padding: 15px; color:wheat;">Login Form</h2>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6 " style="text-align: center;">
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type=" submit">Login</button>
+        </form>
+      </div>
+    </div>
+    <a href="http://127.0.0.1:8000/accounts/logout/" class="cancelbtn">Go Back</a>
+    </dir>
 
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form>
-  <a href="http://127.0.0.1:8000/accounts/logout/" class="nav-link ">Go Back</a>
+
 </body>
 
 </html>
