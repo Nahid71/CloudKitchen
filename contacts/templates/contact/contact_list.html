@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+
+  {% if user.is_authenticated  %}
+  <div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for person in persons %}
+
+        <tr>
+          <td>{{ person.name }}</td>
+          <td>{{ person.email }}</td>
+          <td>{{ person.phone }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  </div>
+
+
+  {% else %}
+  <h5>You have to <a href="http://127.0.0.1:8000/accounts/login/">Log in</a> to view other
+    applications.</h5>
+  {% endif %}
+
+</div>
+{% endblock %}
