@@ -2,7 +2,7 @@
 
 1. Install [Python](https://www.python.org/downloads/).
 2. Set up [venv](https://docs.python.org/3/library/venv.html)
-3. Activate your virtual environment
+3. Create and activate your virtual environment
 
 ```sh
 $ python3 -m venv myvenv
@@ -11,10 +11,10 @@ $ source ./myvenv/bin/activate
 
 4. Install [pip](https://pip.pypa.io/en/stable/installing/)
 
-5. Install Django
+5. Go to project folder and run the below command
 
 ```sh
-$ pip install django
+$ pip install -r requirements.txt
 ```
 
 ## Usage
